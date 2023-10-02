@@ -90,13 +90,14 @@ a{
     flex-direction: row;
     height: 2rem;
     gap:2rem;
+    margin-right: 2rem;
 }
 
 .main-grid{
     margin-top: 10rem;
     display: grid;
     width: 100%;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: 400px 400px 400px;
     grid-template-areas: 
     "section1"
@@ -394,6 +395,7 @@ footer{
 
 
 
+
 /* media query */
 @media (max-width:768px){
 
@@ -564,7 +566,7 @@ align-items: center;
         flex-direction: column;
     }
 
-
+}
 
 
 @media (max-width:320px){
@@ -635,5 +637,5 @@ align-items: center;
 
     }
 
-}
+ 
 }
