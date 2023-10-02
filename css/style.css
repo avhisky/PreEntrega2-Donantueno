@@ -5,10 +5,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
-
-html{
+body{
     background-image: url(../img/background.png);
 }
+
 h4{
     color: white;
     font-family: 'B612 Mono', monospace;
@@ -338,10 +338,14 @@ footer{
 }
 .txt-cont-f{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.5rem;
     font-family: 'B612 Mono', monospace;
 }
 .ayuda-f{
+    flex-direction: column;
+    align-items: center;
     display: flex;
     font-size: 1.5rem;
     font-family: 'B612 Mono', monospace;
@@ -397,16 +401,32 @@ footer{
 
 
 /* media query */
+@media (max-width:1024px) {
+    .main-grid{
+        margin-top: 10rem;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 500px 500px;
+        grid-template-areas: 
+        "section1"
+        "section2"
+        "section3"
+        ;
+    }
+}
+
+
 @media (max-width:768px){
 
     .logo{
         display: flex;
-        width: 100vw;
+        width: 1fr;
     }
     .main-grid{
         display: grid;
         width: 100%;
-        grid-template-columns: 100vw;
+        grid-template-columns: 1fr;
         grid-template-rows: 150px 150px 150px;
         grid-template-areas: 
         "section1"
@@ -442,7 +462,7 @@ footer{
     }
 
     footer{
-        width: 100vw;
+        width: 1fr;
         height: fit-content;
     }
 
@@ -499,6 +519,7 @@ footer{
     height: fit-content;
 }
 
+
 @media (max-width:425px){
 
     /* .main-grid{
@@ -515,7 +536,7 @@ footer{
 
 .logo{
     display: flex;
-    width: 100vw;
+    width: 1fr;
 }
 
 .logoimg{
@@ -526,7 +547,7 @@ footer{
         margin-left: 0;
     }
     nav{
-        width: 100vw;
+        width: 1fr;
     }
 
     .section1{
@@ -562,6 +583,19 @@ align-items: center;
     }
 
     .main-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-prod{
+        width: 95vw;
+    }
+
+    .cardprod{
+        width: 250px;
+        height: 100px;
+    }
+    .filtros-busq{
         display: flex;
         flex-direction: column;
     }
@@ -584,18 +618,18 @@ align-items: center;
     } */
 .logo{
     display: flex;
-    width: 100vw;
+    width: 1fr;
 }
 
 .logoimg{
-    width: 100vw;
+    width: 1fr;
 }
     .menu{
         margin-right: 0;
         margin-left: 0;
     }
     nav{
-        width: 100vw;
+        width: 1fr;
     }
 
     .section1{
@@ -634,6 +668,12 @@ align-items: center;
         display: flex;
         flex-direction: column;
     }
+
+    .filtros-busq{
+        display: flex;
+        flex-direction: column;
+    }
+
 
     }
 
