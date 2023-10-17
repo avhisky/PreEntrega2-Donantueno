@@ -1,0 +1,28 @@
+
+.form-gral{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20rem;
+    margin-top: 10rem;
+    fieldset{
+        div{
+            @extend .form-gral;
+            align-items: center;
+            padding-bottom: 0rem;
+            margin-top: 0rem;
+            gap: 2rem;
+            color: white;
+            font-family: 'B612 Mono', monospace;
+        }
+    }
+    .boton-enviar{
+        width: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+}
+
+

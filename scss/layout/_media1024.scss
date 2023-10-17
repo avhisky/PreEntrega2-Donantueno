@@ -1,0 +1,28 @@
+@media (max-width:1024px){
+    main{
+
+        section{
+        margin-top: 10rem;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 500px 500px;
+        grid-template-areas: 
+        "section1"
+        "section2"
+        "section3"
+        ;
+
+        .section1{
+            .fila1-sec1{
+                .txt-prods1{
+                    p{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+}

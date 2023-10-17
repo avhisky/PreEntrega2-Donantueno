@@ -1,0 +1,50 @@
+nav{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#210010 ;
+    width:1fr;
+    overflow:hidden;
+    position: fixed;
+    top: 0;
+    & #toggle{
+        display: none;
+    }
+    & label{
+        display: none;
+    }
+
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            @include sizes(100vw,4rem);
+            div{
+                display: flex;
+                flex-direction: row;
+                margin-right: 1rem;
+                a{
+                    margin-right: 1rem;
+                }
+            }
+
+        }
+        
+
+    & ul{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none;
+        list-style: none;
+        gap: 4rem;
+        margin: 1rem auto;
+        font-family: 'B612 Mono', monospace;
+
+    }
+}

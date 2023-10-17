@@ -1,0 +1,187 @@
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/maps";
+@import "./base/reset";
+@import "./layout/header";
+@import "./layout/productos";
+@import "./layout/footer";
+@import "./layout/forms";
+@import "./layout/media1024";
+@import "./layout/media768";
+@import "./layout/media425";
+@import "./layout/media320";
+
+
+
+.material-symbols-outlined{
+    display: flex;
+height: 2rem;
+color: white;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #1c000d, #220312, #280515, #2f0518, #37041b, #37041b, #37041b, #37041b, #2f0518, #280515, #220312, #1c000d);
+    }
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+main{
+    section{
+        margin-top: 10rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px;
+    grid-template-areas: 
+    "section1"
+    "section2"
+    "section3"
+    ;
+
+    .tit-medio{
+        background-color: black;
+        color: white;
+        display: flex;
+        margin:2px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-left:5px solid white;
+        border-bottom: 5px solid white;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        width: fit-content;
+    }
+    // section 1 del grid
+        .section1{
+            grid-area: section1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .fila1-sec1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap:1rem;
+                    a:hover{
+                        @include pseudoclase-sombrarroja;
+                        animation: headShake;
+                        animation-duration: 1s;
+                    }
+                    img{
+                        height: 5rem;
+                        animation: wobble;
+                        animation-duration: 1s;
+                    }
+                }
+                .txt-prods1{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    flex-wrap: wrap;
+                    width: 30%;
+                    color:$txt-color;
+                    h2{
+                        font:$tit-font;
+                        color:$txt-color;
+                        @extend .tit-medio;
+                    }
+                    p{
+                        font:$prrfo-font;
+                        width: 80%;
+                    }
+                }
+            }
+            .fila2-sec1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top:map-get($gap,sm);
+                width: 80%;
+                img{
+                    height: 5rem;
+                    animation: wobble;
+                    animation-duration: 1s;
+                    &:hover{
+                        @include pseudoclase-sombrarroja;
+                        animation: headShake;
+                        animation-duration: 1s;
+                    }
+                }
+                .txt-prods2{
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    color: map-get($page-colors,c1);
+                    h2{
+                        font:$tit-font;
+                        color:$txt-color;
+                        @extend .tit-medio;
+                        
+                    }
+                    p{
+                        font:$prrfo-font;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .section2{
+            grid-area: section2;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            h3{
+                color: $txt-color;
+                font:$tit-font;
+                @extend .tit-medio;
+            }
+            img{
+                height: 10rem;
+                &:hover{
+                    @include pseudoclase-sombrarroja;
+                }
+                margin-top: 1rem;
+            }
+        }
+
+        .section3{
+            grid-area: section3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            h3{
+                @extend .tit-medio;
+                font:$tit-font;
+                color:$txt-color;
+            }
+            img{
+                display: flex;
+                height: 5rem;
+                &:hover{
+                    @include pseudoclase-sombrarroja;
+                    transform: scale(1.25,1.25);
+                }
+            }
+            div{
+                display: flex;
+                flex-direction: row;
+                gap:2rem;
+            }
+        }
+    }
+
+}
+
+
+
+
+

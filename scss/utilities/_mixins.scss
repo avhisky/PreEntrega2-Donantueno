@@ -1,0 +1,8 @@
+@mixin pseudoclase-sombrarroja{
+    box-shadow: 0px 0px 10px #530127;
+}
+
+@mixin sizes($width,$height){
+    width: $width;
+    height: $height;
+}
