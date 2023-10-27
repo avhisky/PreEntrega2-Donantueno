@@ -482,5 +482,18 @@ main section .section3 div {
   flex-direction: row;
   gap: 2rem;
 }
+main .containter-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+main .containter-carrito h2 {
+  display: flex;
+  font: 1.5rem "B612 Mono", monospace;
+  margin-top: 10rem;
+  color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
